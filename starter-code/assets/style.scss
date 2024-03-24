@@ -35,10 +35,14 @@ h4 {
     line-height: 110%;
 }
 
+p {
+    color: $darkElectricBlue;
+}
+
 .copy-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 /* Header */
@@ -62,4 +66,23 @@ header {
     height: 64px;
     margin-left: 8.75rem;
     margin-bottom: 6rem;
+}
+
+/* What Your Results Mean */
+#result-meaning {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    img {
+        width: 50%;
+    }
+}
+
+#curve-left {
+    width: 85px;
+    height: 200px;
+    align-self: flex-end;
 }
