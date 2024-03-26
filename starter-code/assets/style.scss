@@ -7,6 +7,8 @@ $bordercolour: #D8E2E7;
 
 /* Global Styles */
 body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     font-size: 16px;
     line-height: 150%;
 }
@@ -47,6 +49,7 @@ p {
 
 /* Header */
 header {
+    grid-column: 1 / span 9;
     width: 75%;
     height: 46rem;
     background: linear-gradient(to right, white, #D6E6FE);
@@ -66,11 +69,14 @@ header {
     height: 64px;
     margin-left: 8.75rem;
     margin-bottom: 6rem;
+
 }
 
 /* What Your Results Mean */
 #result-meaning {
     width: 85%;
+    grid-column: 1 / span 12;
+    grid-row: 2 / span 1;
     margin: auto;
     display: flex;
     gap: 4rem;
@@ -85,4 +91,53 @@ header {
     width: 85px;
     height: 200px;
     align-self: flex-end;
+    position: relative;
+    bottom: 200px;
+}
+
+/* Tips */
+#tips {
+    width: 98%;
+    background: linear-gradient(to right, white, #D6E6FE);
+    border-radius: 35px;
+    margin: 6rem 2rem;
+    grid-column: 1 / span 12;
+    grid-row: 3 / span 1;
+    ul {
+        display: flex;
+        justify-content: space-around;
+
+        list-style: none;
+        gap: 2rem;
+    }
+    li {
+        margin: 2rem;
+    }
+}
+
+/* Limitations*/
+#limitations {
+    width: 90%;
+    margin: auto;
+    grid-column: 1 / span 12;
+    grid-row: 4 / span 1;
+    .container {
+        width: 50%;
+    }
+    #curve-right {
+        position: relative;
+        left: 15%;
+    }
+    ul {
+        list-style: none;
+        width: 65%;
+        float: right;
+        display: grid;
+        li {
+            width: 385px;
+            border-radius: 16px;
+            box-shadow: 16px 32px 56px 0 rgba($color: #8FAECF, $alpha: 0.25);
+            margin: 4rem;
+        }
+    }
 }
