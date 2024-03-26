@@ -3,8 +3,11 @@
 body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 150%;
+  column-gap: 32px;
+  row-gap: 32px;
 }
 
 h1 {
@@ -32,7 +35,7 @@ h4 {
 }
 
 p {
-  color: #5E6E85;
+  color: #5e6e85;
 }
 
 .copy-container {
@@ -46,7 +49,7 @@ header {
   grid-column: 1/span 9;
   width: 75%;
   height: 46rem;
-  background: linear-gradient(to right, white, #D6E6FE);
+  background: linear-gradient(to right, white, #d6e6fe);
   border-bottom-right-radius: 35px;
   display: flex;
   flex-direction: column;
@@ -91,7 +94,7 @@ header .copy-container {
 /* Tips */
 #tips {
   width: 98%;
-  background: linear-gradient(to right, white, #D6E6FE);
+  background: linear-gradient(to right, white, #d6e6fe);
   border-radius: 35px;
   margin: 6rem 2rem;
   grid-column: 1/span 12;
@@ -113,25 +116,39 @@ header .copy-container {
   margin: auto;
   grid-column: 1/span 12;
   grid-row: 4/span 1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 32px;
+  row-gap: 32px;
+  /* Limitation grid positioning */
 }
-#limitations .container {
-  width: 50%;
+#limitations #limitations-description {
+  grid-column: 1/span 6;
 }
 #limitations #curve-right {
-  position: relative;
-  left: 15%;
+  grid-row: 2/span 1;
+  grid-column: 2/span 1;
 }
-#limitations ul {
-  list-style: none;
-  width: 65%;
-  float: right;
-  display: grid;
-}
-#limitations ul li {
+#limitations .limitation {
   width: 385px;
   border-radius: 16px;
   box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
-  margin: 4rem;
+}
+#limitations #gender {
+  grid-area: 1/8/span 1/span 4;
+}
+#limitations #age {
+  grid-area: 2/5/span 1/span 4;
+}
+#limitations #muscle {
+  grid-area: 2/9/span 1/span 4;
+}
+#limitations #pregnancy {
+  grid-area: 3/3/span 1/span 4;
+}
+#limitations #race {
+  grid-area: 3/7/span 1/span 4;
 }
 
 /*# sourceMappingURL=style.css.map */
