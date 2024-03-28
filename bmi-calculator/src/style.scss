@@ -16,6 +16,10 @@ body {
   row-gap: 32px;
 }
 
+#root {
+  width: 100%;
+}
+
 h1 {
   font-size: 4rem;
   font-weight: 600;
@@ -97,7 +101,8 @@ header {
   height: 200px;
   align-self: flex-end;
   position: relative;
-  bottom: 200px;
+  bottom: 400px;
+  left: 250px;
 }
 
 /* Tips */
