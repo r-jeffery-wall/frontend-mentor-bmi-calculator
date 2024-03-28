@@ -1,30 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link href="./assets/style.css" rel="stylesheet" />
+import logo from './logo.svg';
+import './App.css';
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
-
-    <title>Frontend Mentor | Body Mass Index Calculator</title>
-  </head>
-  <body>
-    <header>
-      <img src="./assets/images/logo.svg" alt="company-logo" id="logo" />
-      <div class="copy-container">
-        <h1 class="main-site-title">Body Mass Index Calculator</h1>
+function App() {
+  return (
+<>
+<header>
+      <img src="./images/logo.svg" alt="company-logo" id="logo" />
+      <div className="copy-container">
+        <h1 className="main-site-title">Body Mass Index Calculator</h1>
         <p>
           Better understand your weight in relation to your height using our
           body mass index (BM) calculator. While BMI is not the sole determinant
@@ -34,23 +17,13 @@
       </div>
     </header>
     <section id="bmi-calculator"></section>
-    <!-- React component will go here.
-
-    Enter your details below Metric Imperial Height Weight Your BMI is...
-
-    add score
-
-    Your BMI suggests you're
-    add classification. Your ideal weight is between
-    add range. -->
-
     <section id="result-meaning">
       <img
-        src="./assets/images/image-man-eating.webp"
+        src="./images/image-man-eating.webp"
         alt="A man eating some food."
       />
-      <img id="curve-left" src="./assets/images/pattern-curved-line-left.svg" />
-      <div class="copy-container">
+      <img id="curve-left" src="./images/pattern-curved-line-left.svg" />
+      <div className="copy-container">
         <h2>What your BMI result means</h2>
         <p>
           A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
@@ -66,7 +39,7 @@
       <ul>
         <li>
           <img
-            src="./assets/images/icon-eating.svg"
+            src="./images/icon-eating.svg"
             alt="icon representing a bowl of food."
           />
           <h3>Healthy Eating</h3>
@@ -77,7 +50,7 @@
         </li>
         <li>
           <img
-            src="./assets/images/icon-exercise.svg"
+            src="./images/icon-exercise.svg"
             alt="icon representing a set of weights."
           />
           <h3>Regular exercise</h3>
@@ -88,7 +61,7 @@
         </li>
         <li>
           <img
-            src="./assets/images/icon-sleep.svg"
+            src="./images/icon-sleep.svg"
             alt="icon representing a moon and stars."
           />
           <h3>Adequate sleep</h3>
@@ -111,12 +84,12 @@
       </div>
       <img
         id="curve-right"
-        src="./assets/images/pattern-curved-line-right.svg"
+        src="./images/pattern-curved-line-right.svg"
       />
-      <div class="limitation" id="gender">
-        <div class="limitation-header">
+      <div className="limitation" id="gender">
+        <div className="limitation-header">
           <img
-            src="./assets/images/icon-gender.svg"
+            src="./images/icon-gender.svg"
             alt="an icon representing gender."
           />
           <h4>Gender</h4>
@@ -127,10 +100,10 @@
           evaluating their BMI.
         </p>
       </div>
-      <div class="limitation" id="age">
-        <div class="limitation-header">
+      <div className="limitation" id="age">
+        <div className="limitation-header">
           <img
-            src="./assets/images/icon-age.svg"
+            src="./images/icon-age.svg"
             alt="an icon representing a birthday cake."
           />
           <h4>Age</h4>
@@ -140,10 +113,10 @@
           to underestimate body fat content.
         </p>
       </div>
-      <div class="limitation" id="muscle">
-        <div class="limitation-header">
+      <div className="limitation" id="muscle">
+        <div className="limitation-header">
           <img
-            src="./assets/images/icon-muscle.svg"
+            src="./images/icon-muscle.svg"
             alt="an icon representing muscles."
           />
           <h4>Muscle</h4>
@@ -153,10 +126,10 @@
           doesn't differentiate muscle from fat.
         </p>
       </div>
-      <div class="limitation" id="pregnancy">
-        <div class="limitation-header">
+      <div className="limitation" id="pregnancy">
+        <div className="limitation-header">
           <img
-            src="./assets/images/icon-pregnancy.svg"
+            src="./images/icon-pregnancy.svg"
             alt="an icon representing muscles."
           />
           <h4>Pregnancy</h4>
@@ -167,10 +140,10 @@
           health risks for both mother and child.
         </p>
       </div>
-      <div class="limitation" id="race">
-        <div class="limitation-header">
+      <div className="limitation" id="race">
+        <div className="limitation-header">
           <img
-            src="./assets/images/icon-race.svg"
+            src="./images/icon-race.svg"
             alt="an icon representing the outline of a person."
           />
           <h4>Race</h4>
@@ -182,5 +155,8 @@
         </p>
       </div>
     </section>
-  </body>
-</html>
+    </>
+  );
+}
+
+export default App;

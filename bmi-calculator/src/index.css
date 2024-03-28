@@ -1,0 +1,161 @@
+/* Variables */
+/* Global Styles */
+body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  column-gap: 32px;
+  row-gap: 32px;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+p {
+  color: #5e6e85;
+}
+
+.copy-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Header */
+header {
+  grid-column: 1/span 9;
+  width: 75%;
+  height: 46rem;
+  background: linear-gradient(to right, white, #d6e6fe);
+  border-bottom-right-radius: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+header .copy-container {
+  width: 35.25rem;
+  margin-left: 8.7rem;
+}
+
+#logo {
+  width: 64px;
+  height: 64px;
+  margin-left: 8.75rem;
+  margin-bottom: 6rem;
+}
+
+/* What Your Results Mean */
+#result-meaning {
+  width: 85%;
+  grid-column: 1/span 12;
+  grid-row: 2/span 1;
+  margin: auto;
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#result-meaning img {
+  width: 50%;
+}
+#result-meaning .copy-container {
+  height: 80%;
+}
+
+#curve-left {
+  width: 85px;
+  height: 200px;
+  align-self: flex-end;
+  position: relative;
+  bottom: 200px;
+}
+
+/* Tips */
+#tips {
+  width: 98%;
+  background: linear-gradient(to right, white, #d6e6fe);
+  border-radius: 35px;
+  margin: 6rem 2rem;
+  grid-column: 1/span 12;
+  grid-row: 3/span 1;
+}
+#tips ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem;
+  list-style: none;
+  gap: 2rem;
+}
+#tips li {
+  margin: 2rem;
+}
+
+/* Limitations*/
+#limitations {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 4rem;
+  grid-column: 1/span 12;
+  grid-row: 4/span 1;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 32px;
+  row-gap: 32px;
+  /* Limitation grid positioning */
+}
+#limitations #limitations-description {
+  grid-column: 1/span 6;
+}
+#limitations #curve-right {
+  grid-row: 2/span 1;
+  grid-column: 2/span 1;
+}
+#limitations .limitation {
+  width: 385px;
+  border-radius: 16px;
+  box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
+  padding: 2rem;
+}
+#limitations #gender {
+  grid-area: 1/8/span 1/span 4;
+}
+#limitations #age {
+  grid-area: 2/5/span 1/span 4;
+}
+#limitations #muscle {
+  grid-area: 2/9/span 1/span 4;
+}
+#limitations #pregnancy {
+  grid-area: 3/3/span 1/span 4;
+}
+#limitations #race {
+  grid-area: 3/7/span 1/span 4;
+}
+
+/*# sourceMappingURL=index.css.map */
