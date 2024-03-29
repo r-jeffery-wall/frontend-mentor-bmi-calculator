@@ -3,28 +3,34 @@ export const BMI_Calculator = () => {
     <div className="bmi-calculator">
       <h3>Enter your details below</h3>
       <form>
-          <div id="radio-metric">
-            <input type="radio" id="metric" />
-            <label for="metric">Metric</label>
-          </div>
-          <div id="radio-imperial">
-            <input type="radio" id="imperial" />
-            <label for="imperial">Imperial</label>
-          </div>
-          <div id="input-height">
-            <label for="height">Height</label>
+        <div id="radio-metric" className="input-group-radio">
+          <input type="radio" id="metric" checked />
+          <label for="metric">Metric</label>
+        </div>
+        <div id="radio-imperial" className="input-group-radio">
+          <input type="radio" id="imperial" />
+          <label for="imperial">Imperial</label>
+        </div>
+        <div id="input-height" className="input-group-number">
+          <label for="height">Height</label>
+          <div className="input-unit">
             <input type="number" id="height" />
+            <p className="unit">cm</p>
           </div>
-          <div id="input-weight">
-            <label for="weight">Weight</label>
-            <input type="number" id="weight" />
+        </div>
+        <div id="input-weight" className="input-group-number">
+          <label for="weight">Weight</label>
+          <div className="input-unit">
+          <input type="number" id="weight" />
+          <p className="unit">kg</p>
           </div>
-        <button type="submit">
+        </div>
+        <div id="calculator-results">
           <h3>Welcome!</h3>
           <p>
             Enter your height and weight and you'll see your BMI result here
           </p>
-        </button>
+        </div>
       </form>
     </div>
   );
