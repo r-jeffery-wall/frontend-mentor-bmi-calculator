@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState, useEffect } from 'react';
 
 export const BMI_Calculator = () => {
     const [units, setUnits] = useState('metric');
@@ -9,6 +9,21 @@ export const BMI_Calculator = () => {
     const toggleUnits = (event) => {
         setUnits(event.target.value);
     }
+
+    const calculateBMI = () => {
+        if (units === 'metric') { // Metric formula
+            setBMI((weightKgs / ((heightCms / 100) ** 2)).toFixed(2));
+        }
+        if (units === 'imperial') { // Imperial formula
+            
+        }
+    }
+
+    useEffect(() => {
+        if (heightCms && weightKgs) {
+            calculateBMI()
+        }
+    })
     
     return (
     <div className="bmi-calculator">
