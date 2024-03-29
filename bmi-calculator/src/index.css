@@ -46,9 +46,26 @@ p {
   justify-content: center;
 }
 
+input {
+  border: 1px solid #d8e2e7;
+}
+
 input[type=radio] {
   width: 31px;
   height: 31px;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #345ff6;
+  border-color: #345ff6;
+}
+
+/* This is to remove the increment/decrement buttons for the number inputs */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Header */
@@ -75,6 +92,7 @@ header .copy-container {
   height: 64px;
   margin-left: 8.75rem;
   margin-bottom: 6rem;
+  margin-top: 2rem;
 }
 
 /* BMI Calculator */
@@ -112,7 +130,6 @@ header .copy-container {
   text-align: left;
 }
 .bmi-calculator .input-group-number input {
-  border: 1px solid #d8e2e7;
   border-radius: 12px;
   height: 75%;
 }
@@ -157,9 +174,6 @@ header .copy-container {
 }
 .bmi-calculator #calculator-results h3 {
   margin: 0;
-}
-.bmi-calculator .input {
-  border: 1px solid #d8e2e7;
 }
 
 /* What Your Results Mean */

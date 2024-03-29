@@ -52,11 +52,27 @@ p {
   justify-content: center;
 }
 
+input {
+  border: 1px solid $bordercolour;
+}
+
 input[type="radio"] {
   width: 31px;
   height: 31px;
 }
 
+input:focus {
+  outline: none;
+  border: 1px solid $blue;
+  border-color: $blue;
+}
+
+/* This is to remove the increment/decrement buttons for the number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 /* Header */
 header {
@@ -82,6 +98,7 @@ header {
   height: 64px;
   margin-left: 8.75rem;
   margin-bottom: 6rem;
+  margin-top: 2rem;
 }
 
 /* BMI Calculator */
@@ -111,13 +128,12 @@ header {
     }
   }
   .input-group-number {
-    font-size: .75rem;
+    font-size: 0.75rem;
     color: $darkElectricBlue;
     display: flex;
     flex-direction: column;
     text-align: left;
     input {
-      border: 1px solid $bordercolour;
       border-radius: 12px;
       height: 75%;
     }
@@ -137,7 +153,7 @@ header {
     grid-area: 1 / 1 / span 1 / span 3;
   }
   #radio-imperial {
-    grid-area: 1 / 4 / span 1 / span 3
+    grid-area: 1 / 4 / span 1 / span 3;
   }
   #input-height {
     grid-area: 2 / 1 / span 1 / span 3;
@@ -152,7 +168,7 @@ header {
     background-color: $blue;
     color: white;
     text-align: left;
-    border-top-left-radius:64px;
+    border-top-left-radius: 64px;
     border-bottom-left-radius: 64px;
     border-top-right-radius: 999px;
     border-bottom-right-radius: 999px;
@@ -163,9 +179,6 @@ header {
     h3 {
       margin: 0;
     }
-  }
-  .input {
-    border: 1px solid $bordercolour;
   }
 }
 
@@ -241,7 +254,6 @@ header {
     border-radius: 16px;
     box-shadow: 16px 32px 56px 0 rgba($color: #8faecf, $alpha: 0.25);
     padding: 2rem;
-    
   }
   /* Limitation grid positioning */
   #gender {
