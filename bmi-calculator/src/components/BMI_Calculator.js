@@ -11,7 +11,7 @@ export const BMI_Calculator = () => {
     const [heightIn, setHeightIn] = useState(0);
     const [weightSt, setWeightSt] = useState(0);
     const [weightLbs, setWeightLbs] = useState(0);
-    const [idealWeightMetric, setIdealWeightMetric] = useState([0, 0]);
+    const [idealWeight, setIdealWeight] = useState('');
     const [category, setCategory] = useState('');
     const [BMI, setBMI] = useState(0);
 
@@ -40,10 +40,14 @@ export const BMI_Calculator = () => {
       }
     }
 
-    const calculateIdealWeightMetric = () => {
-      const lowerBound = 18.5 * ((heightCms / 100) ** 2);
-      const upperBound = 24.9 * ((heightCms / 100) ** 2);
-      return [lowerBound.toFixed(2), upperBound.toFixed(2)];
+    const calculateIdealWeight = () => {
+      if (units === 'metric') {
+        const lowerBound = 18.5 * ((heightCms / 100) ** 2);
+        const upperBound = 24.9 * ((heightCms / 100) ** 2);
+        return `${lowerBound.toFixed(1)}kgs - ${upperBound.toFixed(1)}kgs`;
+      } else {
+        
+      }
     }
 
     useEffect(() => {
@@ -54,7 +58,7 @@ export const BMI_Calculator = () => {
 
     useEffect(() => {
       setCategory(chooseCategory());
-      setIdealWeightMetric(calculateIdealWeightMetric());
+      setIdealWeight(calculateIdealWeight());
     }, [BMI])
     
     return (
@@ -70,7 +74,7 @@ export const BMI_Calculator = () => {
           <label for="imperial">Imperial</label>
         </div>
         {units === 'metric' ? <UserInputsMetric height={heightCms} weight={weightKgs} setHeight={setHeightCms} setWeight={setWeightKgs} /> : <UserInputsImperial feet={heightFt} inches={heightIn} stone={weightSt} lbs={weightLbs} setFeet={setHeightFt} setInches={setHeightIn} setStone={setWeightSt} setLbs={setWeightLbs} /> }
-          <ResultDisplay />
+          <ResultDisplay BMI={BMI} idealWeight={idealWeight} category={category} />
       </form>
     </div>
   );

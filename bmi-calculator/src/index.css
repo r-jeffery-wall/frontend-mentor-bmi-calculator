@@ -190,6 +190,25 @@ header .copy-container {
 .bmi-calculator #calculator-results h3 {
   margin: 0;
 }
+.bmi-calculator .complete {
+  display: flex;
+  align-items: center;
+}
+.bmi-calculator .complete .bmi-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin-right: 1.5rem;
+}
+.bmi-calculator .complete .bmi-result h5 {
+  margin: 0;
+}
+.bmi-calculator .complete .bmi-result .bmi {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: bold;
+}
 
 /* What Your Results Mean */
 #result-meaning {
