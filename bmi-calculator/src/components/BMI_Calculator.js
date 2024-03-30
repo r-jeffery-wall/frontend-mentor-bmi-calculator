@@ -21,10 +21,12 @@ export const BMI_Calculator = () => {
 
     const calculateBMI = () => {
         if (units === 'metric') { // Metric formula
-            setBMI((weightKgs / ((heightCms / 100) ** 2)).toFixed(2));
+            setBMI((weightKgs / ((heightCms / 100) ** 2)).toFixed(1));
         }
         if (units === 'imperial') { // Imperial formula
-            
+            const lbs = (weightSt * 14) + weightLbs;
+            const inches = (heightFt * 12) + heightIn;
+            setBMI((703 * (lbs / (inches ** 2))).toFixed(1));
         }
     }
 
@@ -46,12 +48,15 @@ export const BMI_Calculator = () => {
         const upperBound = 24.9 * ((heightCms / 100) ** 2);
         return `${lowerBound.toFixed(1)}kgs - ${upperBound.toFixed(1)}kgs`;
       } else {
-        
+        const inches = (heightFt * 12) + heightIn;
+        const lowerBound = 18.5 / 703 * (inches ** 2);
+        const upperBound = 24.9 / 703 * (inches ** 2);
+        return `${Math.floor(lowerBound / 14)}st ${Math.round(lowerBound % 14)}lbs - ${Math.floor(upperBound / 14)}st ${Math.round(upperBound % 14)}lbs`;
       }
     }
 
     useEffect(() => {
-        if (heightCms && weightKgs) {
+        if (units === 'metric' && heightCms && weightKgs || units === 'imperial' && heightFt && weightSt) {
             calculateBMI()
         }
     }, [heightCms, weightKgs, heightFt, heightIn, weightSt, weightLbs, units])

@@ -18,7 +18,7 @@ export const UserInputsImperial = ({
               type="number"
               id="feet"
               value={feet}
-              onChange={(e) => setFeet(e.target.value)}
+              onChange={(e) => setFeet(Number(e.target.value))}
             />
             <p className="unit">ft</p>
           </div>
@@ -27,7 +27,7 @@ export const UserInputsImperial = ({
               type="number"
               id="inches"
               value={inches}
-              onChange={(e) => setInches(e.target.value)}
+              onChange={(e) => setInches(Number(e.target.value))}
             />
             <p className="unit">in</p>
           </div>
@@ -41,7 +41,7 @@ export const UserInputsImperial = ({
               type="number"
               id="stone"
               value={stone}
-              onChange={(e) => setStone(e.target.value)}
+              onChange={(e) => setStone(Number(e.target.value))}
             />
             <p className="unit">st</p>
           </div>
@@ -50,7 +50,7 @@ export const UserInputsImperial = ({
               type="number"
               id="lbs"
               value={lbs}
-              onChange={(e) => setLbs(e.target.value)}
+              onChange={(e) => setLbs(Number(e.target.value))}
             />
             <p className="unit">lbs</p>
           </div>

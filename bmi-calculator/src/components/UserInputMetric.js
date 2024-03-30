@@ -4,14 +4,14 @@ export const UserInputsMetric = ( { height, weight, setHeight, setWeight} ) => {
         <div id="input-height" className="input-group-number">
         <label for="height">Height</label>
         <div className="input-unit">
-          <input type="number" id="height" value={height} onChange={(e) => setHeight(e.target.value)}/>
+          <input type="number" id="height" value={height} onChange={(e) => setHeight(Number(e.target.value))}/>
           <p className="unit">cm</p>
         </div>
       </div>
       <div id="input-weight" className="input-group-number">
         <label for="weight">Weight</label>
         <div className="input-unit">
-        <input type="number" id="weight" value={weight} onChange={(e) => setWeight(e.target.value)}/>
+        <input type="number" id="weight" value={weight} onChange={(e) => setWeight(Number(e.target.value))}/>
         <p className="unit">kg</p>
         </div>
       </div>
