@@ -102,6 +102,14 @@ header {
 }
 
 /* BMI Calculator */
+#metric {
+  grid-area: 2 / 7 / span 3 / span 6;
+}
+
+#imperial {
+  grid-area: 2 / 7 / span 4 / span 6;
+}
+
 .bmi-calculator {
   grid-area: 2 / 7 / span 3 / span 6;
   background-color: white;
@@ -161,6 +169,13 @@ header {
   }
   #input-weight {
     grid-area: 2 / 4 / span 1 / span 3;
+  }
+  #inputs-imperial {
+    grid-area: 2 / 1 / span 1 / span 5;
+  }
+  .imperial-input-group {
+    display: flex;
+    justify-content: space-between;
   }
   #calculator-results {
     grid-area: 3 / 1 / span 2 / span 6;

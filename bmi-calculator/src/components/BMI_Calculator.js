@@ -1,11 +1,17 @@
 import { useState, useEffect } from 'react';
-import { UserInputs } from './UserInput';
+import { UserInputsMetric } from './UserInputMetric';
 import { ResultDisplay } from './ResultDisplay';
+import { UserInputsImperial } from './UserInputImperial';
 
 export const BMI_Calculator = () => {
     const [units, setUnits] = useState('metric');
     const [heightCms, setHeightCms] = useState(0);
     const [weightKgs, setWeightKgs] = useState(0);
+    const [heightFt, setHeightFt] = useState(0);
+    const [heightIn, setHeightIn] = useState(0);
+    const [weightSt, setWeightSt] = useState(0);
+    const [weightLbs, setWeightLbs] = useState(0);
+    const [idealWeight, setIdealWeight] = useState([0, 0]);
     const [BMI, setBMI] = useState(0);
 
     const toggleUnits = (event) => {
@@ -28,7 +34,7 @@ export const BMI_Calculator = () => {
     })
     
     return (
-    <div className="bmi-calculator">
+    <div className="bmi-calculator" id={units}>
       <h3>Enter your details below</h3>
       <form>
         <div id="radio-metric" className="input-group-radio">
@@ -39,7 +45,7 @@ export const BMI_Calculator = () => {
           <input type="radio" id="imperial" value="imperial" checked={units === 'imperial'} name='units' onChange={toggleUnits} />
           <label for="imperial">Imperial</label>
         </div>
-        <UserInputs unit={units} heightCms={heightCms} weightKgs={weightKgs} setHeightCms={setHeightCms} setWeightKgs={setWeightKgs} />
+        {units === 'metric' ? <UserInputsMetric height={heightCms} weight={weightKgs} setHeight={setHeightCms} setWeight={setWeightKgs} /> : <UserInputsImperial feet={heightFt} inches={heightIn} stone={weightSt} lbs={weightLbs} setFeet={setHeightFt} setInches={setHeightIn} setStone={setWeightSt} setLbs={setWeightLbs} /> }
           <ResultDisplay />
       </form>
     </div>
