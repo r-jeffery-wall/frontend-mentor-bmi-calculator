@@ -48,16 +48,28 @@ p {
 
 input {
   border: 1px solid #d8e2e7;
+  width: 100%;
 }
 
 input[type=radio] {
   width: 31px;
   height: 31px;
+  appearance: none;
+  border-radius: 50%;
+}
+
+input[type=radio]:checked {
+  background-color: #345ff6;
+  border: 8px solid #D8E2E7;
+}
+
+input:hover {
+  outline: none;
+  border: 1px solid #345ff6;
 }
 
 input:focus {
   outline: none;
-  border: 1px solid #345ff6;
   border-color: #345ff6;
 }
 
@@ -144,13 +156,13 @@ header .copy-container {
 .bmi-calculator .input-unit {
   display: flex;
   align-items: center;
+  width: 250px;
 }
 .bmi-calculator .unit {
   color: #345ff6;
   font-size: 1.5rem;
   font-weight: bold;
-  position: relative;
-  left: -40px;
+  margin-left: -50px;
 }
 .bmi-calculator #radio-metric {
   grid-area: 1/1/span 1/span 3;
