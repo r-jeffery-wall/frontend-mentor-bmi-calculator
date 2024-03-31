@@ -318,3 +318,86 @@ header {
     grid-area: 3 / 7 / span 1 / span 4;
   }
 }
+
+// Tablet media queries
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+  #root {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+  #curve-left, #curve-right {
+    display: none;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    #logo {
+      margin: auto;
+    }
+    .copy-container {
+      margin: auto;
+    }
+  }
+  .bmi-calculator {
+    width: 95%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    bottom: 200px;
+  }
+  #gradient-background {
+    width: 100%;
+    height: 640px;
+  }
+  #tips {
+    ul {
+      flex-direction: column;
+    }
+    img {
+      position: relative;
+      right: 100px;
+      top: 75px;
+    }
+  }
+  #limitations {
+    grid-template-rows: repeat(4, 1fr) !important;
+    gap: 16px;
+  }
+  #limitations-description {
+    grid-area: 1 / 1 / span 1 / span 12 !important;
+    text-align: center;
+  }
+  .limitation {
+    width: 285px !important;
+  }
+  .limitation-header {
+    display: flex;
+    flex-direction: row;
+    h4 {
+      margin-left: 1rem;
+    }
+  }
+  #gender {
+    grid-area: 2 / 1 / span 1 / span 6 !important;
+  }
+  #age {
+    grid-area: 2 / 7 / span 1 / span 6 !important;
+  }
+  #muscle {
+    grid-area: 3 / 1 / span 1 / span 6 !important;
+  }
+  #pregnancy {
+    grid-area: 3 / 7 / span 1 / span 6 !important;
+  }
+  #race {
+    grid-area: 4 / 1 / span 1 / span 12 !important;
+    align-self: center;
+  }
+}
