@@ -345,6 +345,9 @@ header .copy-container {
     position: relative;
     bottom: 200px;
   }
+  .bmi-calculator form {
+    grid-template-rows: repeat(3, 1fr);
+  }
   #gradient-background {
     width: 100%;
     height: 640px;
