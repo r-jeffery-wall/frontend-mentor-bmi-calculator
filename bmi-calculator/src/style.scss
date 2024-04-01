@@ -346,6 +346,9 @@ header {
       margin: auto;
     }
   }
+  #result-meaning {
+    margin-left: 0;
+  }
   .bmi-calculator {
     width: 95%;
     height: auto;
@@ -353,7 +356,7 @@ header {
     position: relative;
     bottom: 200px;
     form {
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
     }
   }
 
@@ -365,6 +368,10 @@ header {
   #tips {
     ul {
       flex-direction: column;
+      padding: 0;
+      li {
+        padding-left: 50px;
+      }
     }
     img {
       position: relative;
@@ -373,15 +380,17 @@ header {
     }
   }
   #limitations {
+    width: 85%;
     grid-template-rows: repeat(4, 1fr) !important;
-    gap: 16px;
+    gap: 8px;
+    margin: auto;
   }
   #limitations-description {
     grid-area: 1 / 1 / span 1 / span 12 !important;
     text-align: center;
   }
   .limitation {
-    width: 285px !important;
+    width: 250px !important;
   }
   .limitation-header {
     display: flex;
@@ -418,12 +427,15 @@ header {
 
   #result-meaning {
     flex-direction: column;
+    text-align: center;
+    margin: auto;
     img {
       width: 100%;
     }
   }
   form {
     gap: 8px !important;
+    grid-template-rows: repeat(4, auto);
     justify-content: center;
   }
   #input-height {
@@ -432,6 +444,14 @@ header {
   }
   #input-weight {
     grid-area: 3 / 1 / span 1 / span 6 !important;
+  }
+  #inputs-imperial {
+    grid-column: 1 / span 6 !important;
+    width: 100%;
+    margin: auto;
+  }
+  .input-group-radio {
+    height: 75px;
   }
   .bmi-calculator {
     margin-top: 2rem;
@@ -461,7 +481,6 @@ header {
     margin: 0;
     ul {
       align-items: flex-start;
-      padding: 0;
     }
 
     img {

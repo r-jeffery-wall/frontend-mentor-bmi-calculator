@@ -339,6 +339,9 @@ header .copy-container {
   header .copy-container {
     margin: auto;
   }
+  #result-meaning {
+    margin-left: 0;
+  }
   .bmi-calculator {
     width: 95%;
     height: auto;
@@ -347,7 +350,7 @@ header .copy-container {
     bottom: 200px;
   }
   .bmi-calculator form {
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
   }
   #gradient-background {
     width: 100%;
@@ -355,6 +358,10 @@ header .copy-container {
   }
   #tips ul {
     flex-direction: column;
+    padding: 0;
+  }
+  #tips ul li {
+    padding-left: 50px;
   }
   #tips img {
     position: relative;
@@ -362,15 +369,17 @@ header .copy-container {
     top: 75px;
   }
   #limitations {
+    width: 85%;
     grid-template-rows: repeat(4, 1fr) !important;
-    gap: 16px;
+    gap: 8px;
+    margin: auto;
   }
   #limitations-description {
     grid-area: 1/1/span 1/span 12 !important;
     text-align: center;
   }
   .limitation {
-    width: 285px !important;
+    width: 250px !important;
   }
   .limitation-header {
     display: flex;
@@ -405,12 +414,15 @@ header .copy-container {
   }
   #result-meaning {
     flex-direction: column;
+    text-align: center;
+    margin: auto;
   }
   #result-meaning img {
     width: 100%;
   }
   form {
     gap: 8px !important;
+    grid-template-rows: repeat(4, auto);
     justify-content: center;
   }
   #input-height {
@@ -419,6 +431,14 @@ header .copy-container {
   }
   #input-weight {
     grid-area: 3/1/span 1/span 6 !important;
+  }
+  #inputs-imperial {
+    grid-column: 1/span 6 !important;
+    width: 100%;
+    margin: auto;
+  }
+  .input-group-radio {
+    height: 75px;
   }
   .bmi-calculator {
     margin-top: 2rem;
@@ -446,7 +466,6 @@ header .copy-container {
   }
   #tips ul {
     align-items: flex-start;
-    padding: 0;
   }
   #tips img {
     right: 0;
